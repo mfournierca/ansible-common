@@ -1,0 +1,50 @@
+---
+
+#set up basic security
+
+#used to set up basic security on ubuntu 12.04
+#follows the how-to at http://feross.org/how-to-setup-your-linode/
+
+#requires that the {{ssh_port}} variable be set to the port number
+#used to log in with ssh
+
+#
+#install and configure fail2ban
+#
+- name: install fail2ban
+  apt: pkg=fail2ban state=installed
+  sudo: True
+
+- name: copy jail.conf to jail.local
+  command: cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+  sudo: True
+
+- name: enable ssh-ddos in jail.local
+  ini_file: dest=/etc/fail2ban/jail.local
+  			section=ssh-ddos
+  			option=enabled
+  			value=true
+  sudo: True
+
+- name: set port in ssh-ddos in jail.local
+  ini_file: dest=/etc/fail2ban/jail.local
+            section=ssh-ddos
+            option=port
+            value={{ssh_port}}
+  sudo: True
+
+- name: set port in ssh in jail.local
+  ini_file: dest=/etc/fail2ban/jail.local
+            section=ssh
+            option=port
+            value={{ssh_port}}
+
+- name: restart fail2ban service
+  service: name=fail2ban state=restarted
+  sudo: True
+
+
+
+#should configure firewall / iptables manually until you figure out something better. 
+#See https://github.com/ansible/ansible/issues/2459 for discussion and 
+#http://www.gettingcirrius.com/2013/11/configure-iptables-with-ansible.html for a possible approach

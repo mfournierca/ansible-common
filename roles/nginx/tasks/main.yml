@@ -1,0 +1,11 @@
+---
+
+#install nginx on the ubuntu server
+
+- name: apt update cache
+  apt: update_cache=yes
+  sudo: True
+
+- name: install nginx
+  apt: pkg=nginx state=present
+  sudo: True

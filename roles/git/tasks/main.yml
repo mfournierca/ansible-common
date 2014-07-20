@@ -1,0 +1,7 @@
+--- 
+
+#install git
+
+- name: install git
+  apt: pkg=git state=present
+  sudo: True
