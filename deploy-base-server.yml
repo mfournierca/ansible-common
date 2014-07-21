@@ -1,0 +1,10 @@
+---
+
+#install and configure a base server
+
+- name: deploying site
+  hosts: main
+  roles:
+  	- git 
+  	- iptables
+  	- fail2ban
