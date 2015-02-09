@@ -2,11 +2,11 @@
 
 - name: update apt cache
   apt: update_cache=yes
-  sudo: true
+  sudo: True
 
 - name: install apt-requirements
   apt: name={{ item }} state=present
-  sudo: true
+  sudo: True
   with_items:
       - vim
       - curl 
