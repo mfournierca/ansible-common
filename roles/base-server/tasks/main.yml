@@ -1,12 +1,5 @@
 ---
 
-- name: update apt cache
-  apt: update_cache=yes
-  sudo: True
+- include: tasks/install_apt_requirements.yml
+- include: tasks/add_users.yml
 
-- name: install apt-requirements
-  apt: name={{ item }} state=present
-  sudo: True
-  with_items:
-      - vim
-      - curl 
