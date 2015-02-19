@@ -1,5 +1,5 @@
 ---
 
-- include: tasks/install_apt_requirements.yml
-- include: tasks/add_users.yml
+- include: install_apt_requirements.yml
+- include: add_users.yml
 

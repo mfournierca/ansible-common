@@ -1,6 +1,13 @@
 ---
 
+- name: remove user matthew
+  user: name=matthew
+        state=absent
+  sudo: True
+
 - name: add user matthew
   user: name=matthew
         state=present
-        groups="wheel"
+        groups="sudo"
+  sudo: True
+
