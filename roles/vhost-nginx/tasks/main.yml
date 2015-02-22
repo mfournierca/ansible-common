@@ -7,7 +7,7 @@
 
 #copy virtual host file
 - name: copy virtual host file
-  template: src={{ nginx_vhost_template | default vhost_default.txt }} dest=/etc/nginx/sites-available/{{ nginx_server_name }}
+  template: src={{ nginx_vhost_template | default("vhost_default.txt") }} dest=/etc/nginx/sites-available/{{ nginx_server_name }}
   sudo: True
 
 #create symlink in sites-enabled

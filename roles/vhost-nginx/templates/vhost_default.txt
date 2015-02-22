@@ -1,3 +1,5 @@
+# this is the default nginx virtual host file
+
 server {
     server_name {{ nginx_server_name }};
     root /var/www/{{ nginx_server_name }};
