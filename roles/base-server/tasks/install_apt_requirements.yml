@@ -10,3 +10,10 @@
   with_items:
       - vim
       - curl 
+      - screen
+      - tmux
+      - htop
+      - ipython
+      - python 
+      - pip 
+
