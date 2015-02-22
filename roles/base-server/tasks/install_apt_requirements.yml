@@ -14,5 +14,6 @@
       - tmux
       - htop
       - ipython
-      - python 
+      - python
+      - python-pip
 
