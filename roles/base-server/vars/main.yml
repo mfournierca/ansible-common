@@ -1,0 +1,12 @@
+--- 
+
+current_users: 
+  - name: matthew
+    groups: sysadmin 
+    authorized: 
+      - ~/.ssh/id_rsa.pub
+    shell: /bin/bash
+    uid: 10001
+   
+old_users: 
+  - nobody
