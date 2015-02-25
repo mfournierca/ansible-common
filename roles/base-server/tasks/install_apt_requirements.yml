@@ -8,6 +8,7 @@
   apt: name={{ item }} state=present
   sudo: True
   with_items:
+      - git
       - vim
       - curl 
       - screen
