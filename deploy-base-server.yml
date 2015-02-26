@@ -3,9 +3,11 @@
 #install and configure a base server
 
 - name: deploying base server
+  hosts: all
+  sudo: True
   roles:
-  	- base-requirements
+    - base-requirements
     - base-groups
     - ANXS.generic-users
-    - iptables
-  	- fail2ban
+#    - iptables
+#    - fail2ban
