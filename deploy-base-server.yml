@@ -2,9 +2,10 @@
 
 #install and configure a base server
 
-- name: deploying site
-  hosts: main
+- name: deploying base server
   roles:
-  	- git 
-  	- iptables
+  	- base-requirements
+    - base-groups
+    - ANXS.generic-users
+    - iptables
   	- fail2ban

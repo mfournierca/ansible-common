@@ -1,0 +1,10 @@
+---
+
+- name: create the sysadmin group
+  group: name=sysadmin state=present gid=30000
+  sudo: True
+
+- name: allow the sysadmin group to sudo
+  copy: src=etc/sudoers.d/sysadmin dest=/etc/sudoers.d/sysadmin validate='visudo -cf %s' mode=440
+  sudo: True
+
