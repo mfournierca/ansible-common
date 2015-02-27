@@ -7,10 +7,12 @@
   sudo: True
   vars_files:
     - vars/openssh_server_config.yml
+    - vars/fail2ban.yml
   roles:
     - base-requirements
     - base-groups
     - ANXS.generic-users
     - Stouts.openssh
+    - ANXS.fail2ban
 #    - iptables
 #    - fail2ban
