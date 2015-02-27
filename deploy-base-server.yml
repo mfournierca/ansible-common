@@ -9,5 +9,6 @@
     - base-requirements
     - base-groups
     - ANXS.generic-users
+    - Stouts.openssh
 #    - iptables
 #    - fail2ban
