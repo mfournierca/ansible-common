@@ -6,7 +6,7 @@
   hosts: all
   sudo: True
   vars_files:
-    - vars/main.yml
+    - vars/openssh_server_config.yml
   roles:
     - base-requirements
     - base-groups
