@@ -1,2 +1,3 @@
 dependancies:
   - ANXS.generic-users
+  - Stouts.openssh
