@@ -1,0 +1,16 @@
+fail2ban_services:
+
+  - name: ssh
+    enabled: "true"
+    port: ssh
+    filter: sshd
+    logpath: /var/log/auth.log
+    maxretry: 6
+
+  - name: ssh-ddos
+    enabled: "true"
+    port: ssh
+    filter: ssh-ddos
+    logpath: /var/log/auth.log
+    maxretry: 6
+
