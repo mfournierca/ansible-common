@@ -9,6 +9,7 @@
     - vars/openssh_server_config.yml
     - vars/fail2ban.yml
     - vars/iptables.yml
+    - vars/generic_users.yml
   roles:
     - base-requirements
     - base-upgrade
