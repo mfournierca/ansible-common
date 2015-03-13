@@ -18,6 +18,3 @@
       - python
       - python-pip
 
-- name: safe upgrade all packages
-  apt: upgrade=safe
-  sudo: True
