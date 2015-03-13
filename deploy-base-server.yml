@@ -11,6 +11,7 @@
     - vars/iptables.yml
   roles:
     - base-requirements
+    - base-upgrade
     - base-groups
     - ANXS.generic-users
     - Stouts.openssh
