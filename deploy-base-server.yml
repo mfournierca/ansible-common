@@ -1,0 +1,19 @@
+---
+
+#install and configure a base server
+
+- name: deploying base server
+  hosts: all
+  sudo: True
+  vars_files:
+    - vars/openssh_server_config.yml
+    - vars/fail2ban.yml
+    - vars/iptables.yml
+  roles:
+    - base-requirements
+    - base-upgrade
+    - base-groups
+    - ANXS.generic-users
+    - Stouts.openssh
+    - ANXS.fail2ban
+    - Stouts.iptables

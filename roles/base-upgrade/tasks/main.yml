@@ -1,0 +1,5 @@
+---
+
+- name: safe upgrade all packages
+  apt: upgrade=safe update-cache=yes
+  sudo: True
