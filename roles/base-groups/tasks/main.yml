@@ -8,3 +8,10 @@
   copy: src=etc/sudoers.d/sysadmin dest=/etc/sudoers.d/sysadmin validate='visudo -cf %s' mode=440
   sudo: True
 
+- name: create the sysadmin user
+  user: name=sysadmin group=sysadmin
+  sudo: True
+
+- name: add system update to the sysadmin crontab
+  cron: hour=0 state=present user=sysadmin name="update packages" job="sudo apt-get update && sudo apt-get upgrade"
+  sudo: True
