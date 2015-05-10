@@ -1,2 +1,4 @@
 iptables_allowed_tcp_ports: [22, 80, 443] 
-                                        
+iptables_raw_rules:
+  - -A INPUT -i lo -j ACCEPT
+  - -A OUTPUT -o lo -j ACCEPT
