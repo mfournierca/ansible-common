@@ -1,3 +1,0 @@
-[submodule "roles/postgresql"]
-	path = roles/postgresql
-	url = https://mfournierca:1lariaIlaria@github.com/mfournierca/postgresql.git
