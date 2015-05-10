@@ -1,7 +1,7 @@
 ---
 
 - name: create the sysadmin group
-  group: name=sysadmin state=present gid=30000
+  group: name=sysadmin group=sysadmin state=present gid=30000
   sudo: True
 
 - name: allow the sysadmin group to sudo

@@ -13,6 +13,7 @@
     - base-requirements
     - base-upgrade
     - base-groups
+    - base-cron
     - ANXS.generic-users
     - Stouts.openssh
     - ANXS.fail2ban
