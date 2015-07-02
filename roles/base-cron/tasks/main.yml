@@ -1,5 +1,5 @@
 ---
 
 - name: add system update to the sysadmin crontab
-  cron: hour=0 state=present user=sysadmin name="update packages" job="sudo apt-get --yes update && sudo apt-get --yes upgrade"
+  cron: day=1 state=present user=sysadmin name="update packages" job="sudo apt-get --yes update && sudo apt-get --yes upgrade"
   sudo: True
