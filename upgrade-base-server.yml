@@ -1,0 +1,6 @@
+---
+- name: upgrading base server
+  hosts: all
+  sudo: True
+  roles:
+    - base-upgrade

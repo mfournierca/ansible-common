@@ -11,7 +11,6 @@
     - vars/iptables.yml
   roles:
     - base-requirements
-    - base-upgrade
     - base-groups
     - base-cron
     - ANXS.generic-users
