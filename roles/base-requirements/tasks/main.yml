@@ -10,11 +10,12 @@
   with_items:
       - git
       - vim
-      - curl 
+      - curl
       - screen
       - tmux
       - htop
       - ipython
       - python
       - python-pip
+      - unzip
 
