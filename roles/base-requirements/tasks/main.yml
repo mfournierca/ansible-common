@@ -18,4 +18,11 @@
       - python
       - python-pip
       - unzip
+      - zip
+
+- name: install pip requirements
+  pip: name={{ item }} state=present
+  sudo: True
+  with_items:
+    - boto
 
